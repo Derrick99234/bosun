@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import portfolioData from "@/data/portfolio.json";
 
 import { CiMail } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
@@ -9,8 +10,10 @@ import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 type Project = {
   title: string;
   description: string;
+  href: string;
+  image: string;
+  contribution: "Full-stack" | "Backend";
   tags: string[];
-  href?: string;
   repo?: string;
 };
 
@@ -23,109 +26,44 @@ type Experience = {
   highlights: string[];
 };
 
-const projects: Project[] = [
-  {
-    title: "API Platform",
-    description:
-      "A modular REST API with clean architecture, robust error handling, and authentication-ready patterns.",
-    tags: ["Node.js", "TypeScript", "MongoDB", "JWT"],
-  },
-  {
-    title: "Admin Dashboard",
-    description:
-      "A fast, responsive dashboard with clean UI, reliable API integration, and performance-focused components.",
-    tags: ["Next.js", "React", "Tailwind"],
-  },
-  {
-    title: "Workflow Automation",
-    description:
-      "Automation-first tooling and integrations that reduce manual work, with pragmatic AI-assisted features.",
-    tags: ["Automation", "Integrations", "AI"],
-  },
-];
+type PortfolioData = {
+  profile: {
+    name: string;
+    title: string;
+    location: string;
+    email: string;
+    phone: string;
+    links: {
+      github: string;
+      linkedin: string;
+      x: string;
+    };
+  };
+  resumeSummary: string[];
+  projects: Project[];
+  skills: {
+    frontend: string[];
+    backend: string[];
+    mobile: string[];
+    tools: string[];
+  };
+  experience: Experience[];
+};
 
-const frontendSkills = [
-  "React.js",
-  "Next.js",
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "TypeScript",
-  "JavaScript",
-];
+const portfolio = portfolioData as PortfolioData;
+const profile = portfolio.profile;
+const projects = portfolio.projects;
+const frontendSkills = portfolio.skills.frontend;
+const backendSkills = portfolio.skills.backend;
+const mobileSkills = portfolio.skills.mobile;
+const toolsSkills = portfolio.skills.tools;
+const experience = portfolio.experience;
 
-const backendSkills = [
-  "Node.js",
-  "Express.js",
-  "Nest.js",
-  "MongoDB",
-  "Postman",
-  "AWS",
-  "Python",
-  "Firebase",
-  "Django",
-  "JWT / RBAC",
-  "TypeScript",
-  "JavaScript",
-];
-
-const mobileSkills = ["React Native", "NativeWind", "Expo", "TypeScript"];
-
-const toolsSkills = ["Jira", "Trello", "Figma", "VS Code", "Git", "GitHub"];
-
-const experience: Experience[] = [
-  {
-    company: "iDeyFind",
-    location: "Remote",
-    role: "Software Engineer",
-    dates: "Jan 2024 - Dec 2025",
-    highlights: [
-      "Collaborated closely with a cross-functional team to design, build, and maintain an internal product from concept to production.",
-      "Engaged in Agile ceremonies (sprint planning, daily stand-ups, retrospectives) to align on goals and continuously improve team delivery.",
-      "Created and maintained technical documentation to support team knowledge sharing, onboarding, and long-term product sustainability.",
-      "Used Git-based workflows to collaborate efficiently, manage feature branches, and ensure a stable development pipeline.",
-      "Developed and maintained RESTful APIs and core application features tailored specifically to internal business needs.",
-      "Collaborated closely with a cross-functional team to design, build, and maintain an internal product from concept to production.",
-    ],
-  },
-  {
-    company: "Sleeky Programmers Limited",
-    location: "Remote",
-    role: "Intern Software Engineer",
-    dates: "Aug 2024 - Apr 2025",
-    highlights: [
-      "Participated in code reviews to maintain high-quality standards and best practices.",
-      "Worked in Agile ceremonies (sprint planning, stand-ups, retrospectives).",
-      "Built RESTful APIs and integrated third-party services to streamline application processes.",
-      "Contributed to scalable web applications using Next.js, Nest.js, Express.js, React, MongoDB, Node.js, and TypeScript.",
-      "Used Git workflows to collaborate, resolve conflicts, and keep a clean development pipeline.",
-      "Wrote technical documentation for project workflows and APIs to support onboarding and knowledge transfer.",
-    ],
-  },
-  {
-    company: "Goldtech ICT Hub LTD",
-    location: "Lagos, Nigeria",
-    role: "Software Engineer / Instructor",
-    dates: "Sep 2024 - Dec 2024",
-    highlights: [
-      "Conducted training sessions for 50+ students across frontend and backend technologies.",
-      "Designed real-world projects to improve learning outcomes and employability.",
-      "Mentored developers-in-training and helped shape a strong foundation in modern web development.",
-    ],
-  },
-  {
-    company: "Babtech Computers",
-    location: "Lagos, Nigeria",
-    role: "Frontend Web Developer",
-    dates: "Oct 2023 - Apr 2024",
-    highlights: [
-      "Led development of responsive web applications, improving user engagement by 20%.",
-      "Mentored junior developers on best practices in React and CSS frameworks.",
-      "Collaborated with cross-functional teams to deliver optimized solutions.",
-      "Supported students as an instructor, guiding budding IT enthusiasts.",
-    ],
-  },
-];
+const nameParts = profile.name.trim().split(/\s+/);
+const firstName =
+  nameParts.length > 1 ? nameParts.slice(0, -1).join(" ") : profile.name;
+const lastName = nameParts.length > 1 ? nameParts.at(-1) ?? "" : "";
+const initials = `${firstName[0] ?? ""}${lastName[0] ?? ""}`.toUpperCase();
 
 function Badge({ children }: { children: React.ReactNode }) {
   return (
@@ -166,12 +104,35 @@ function Section({
 function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white/70 p-7 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-950/40 dark:shadow-none">
+      <div className="-mt-1 mb-5 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <Image
+            src={project.image}
+            alt={`${project.title} icon`}
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-xl border border-slate-200 bg-white object-contain p-2 dark:border-slate-800 dark:bg-slate-950"
+          />
+          <div className="min-w-0">
+            <h3 className="truncate text-lg font-semibold text-slate-900 dark:text-slate-100">
+              {project.title}
+            </h3>
+            <p className="mt-1 text-xs font-semibold text-slate-500 dark:text-slate-400">
+              {project.contribution === "Backend" ? "Backend-only" : "Full-stack"}
+            </p>
+          </div>
+        </div>
+        <Link
+          href={project.href}
+          target="_blank"
+          className="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
+        >
+          Visit
+        </Link>
+      </div>
       <div className="flex items-start justify-between gap-6">
         <div>
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-            {project.title}
-          </h3>
-          <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">
+          <p className="text-sm leading-7 text-slate-600 dark:text-slate-400">
             {project.description}
           </p>
         </div>
@@ -181,26 +142,15 @@ function ProjectCard({ project }: { project: Project }) {
           <Badge key={tag}>{tag}</Badge>
         ))}
       </div>
-      {(project.href || project.repo) && (
-        <div className="mt-6 flex flex-wrap gap-3">
-          {project.href && (
-            <Link
-              href={project.href}
-              target="_blank"
-              className="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
-            >
-              Live
-            </Link>
-          )}
-          {project.repo && (
-            <Link
-              href={project.repo}
-              target="_blank"
-              className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
-            >
-              Repo
-            </Link>
-          )}
+      {project.repo && (
+        <div className="mt-5">
+          <Link
+            href={project.repo}
+            target="_blank"
+            className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
+          >
+            Repo
+          </Link>
         </div>
       )}
     </div>
@@ -219,15 +169,15 @@ export default function Home() {
             >
               <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 via-fuchsia-600 to-emerald-500 p-[1px]">
                 <span className="inline-flex h-full w-full items-center justify-center rounded-[11px] bg-white text-xs font-extrabold tracking-tight text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-                  OO
+                  {initials}
                 </span>
               </span>
               <span className="flex flex-col leading-none">
                 <span className="text-sm font-semibold tracking-tight">
-                  Olatunbosun
+                  {firstName}
                 </span>
                 <span className="mt-1 text-xs font-semibold text-slate-500 dark:text-slate-400">
-                  Olashubomi
+                  {lastName}
                 </span>
               </span>
             </Link>
@@ -291,10 +241,10 @@ export default function Home() {
                   <Badge>Automation • AI</Badge>
                 </div>
                 <h1 className="mt-8 text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:text-6xl">
-                  Olatunbosun Olashubomi
+                  {profile.name}
                 </h1>
                 <p className="mt-4 max-w-2xl text-base font-semibold tracking-tight text-slate-700 dark:text-slate-300">
-                  Software Engineer | Web, Mobile & Automation Engineer
+                  {profile.title}
                 </p>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
                   Highly skilled software engineer with a strong foundation in
@@ -303,12 +253,12 @@ export default function Home() {
                   system performance—focused on impact, clarity, and maintainability.
                 </p>
                 <p className="mt-4 text-sm font-semibold text-slate-600 dark:text-slate-400">
-                  Lagos, Nigeria
+                  {profile.location}
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Link
-                    href="mailto:pshubomi@gmail.com"
+                    href={`mailto:${profile.email}`}
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
                   >
                     <CiMail className="h-5 w-5" />
@@ -322,7 +272,7 @@ export default function Home() {
                     Download Resume
                   </Link>
                   <Link
-                    href="https://github.com/Derrick99234"
+                    href={profile.links.github}
                     target="_blank"
                     className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                   >
@@ -369,7 +319,7 @@ export default function Home() {
 
                 <div className="mt-7 flex items-center gap-3">
                   <Link
-                    href="https://www.linkedin.com/in/derricktechtron-73717b23a"
+                    href={profile.links.linkedin}
                     target="_blank"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                     aria-label="LinkedIn"
@@ -377,7 +327,7 @@ export default function Home() {
                     <FaLinkedin className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="https://x.com/Derrick9923"
+                    href={profile.links.x}
                     target="_blank"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                     aria-label="X"
@@ -385,7 +335,7 @@ export default function Home() {
                     <FaXTwitter className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="https://github.com/Derrick99234"
+                    href={profile.links.github}
                     target="_blank"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                     aria-label="GitHub"
@@ -405,7 +355,7 @@ export default function Home() {
                 <div className="overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800">
                   <Image
                     src="/ola-profile.png"
-                    alt="Olatunbosun Olashubomi"
+                    alt={profile.name}
                     width={900}
                     height={900}
                     priority
@@ -418,11 +368,11 @@ export default function Home() {
                     About me
                   </h3>
                   <p className="mt-4 leading-8 text-slate-600 dark:text-slate-400">
-                    I&apos;m Olatunbosun Olashubomi, a software engineer in Lagos,
-                    Nigeria. I build scalable web and mobile applications with a
-                    strong backend foundation—clean APIs, authentication flows, and
-                    reliable database integration—while also delivering modern UIs in
-                    React/Next.js and React Native.
+                    I&apos;m {profile.name}, a software engineer based in{" "}
+                    {profile.location}. I build scalable web and mobile applications
+                    with a strong backend foundation—clean APIs, authentication flows,
+                    and reliable database integration—while also delivering modern UIs
+                    in React/Next.js and React Native.
                   </p>
                   <p className="mt-4 leading-8 text-slate-600 dark:text-slate-400">
                     I&apos;ve also worked as an instructor, training and mentoring
@@ -603,8 +553,12 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="projects" eyebrow="Projects" title="Featured work">
-          <div className="grid gap-6 lg:grid-cols-3">
+        <Section
+          id="projects"
+          eyebrow="Projects"
+          title={`Selected projects (${projects.length})`}
+        >
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
@@ -614,7 +568,7 @@ export default function Home() {
               Want to see more? I keep shipping and iterating on GitHub.
             </p>
             <Link
-              href="https://github.com/Derrick99234"
+              href={profile.links.github}
               target="_blank"
               className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
             >
@@ -635,41 +589,41 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col gap-3">
                 <Link
-                  href="mailto:pshubomi@gmail.com"
+                  href={`mailto:${profile.email}`}
                   className="inline-flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                 >
                   <span>Email</span>
                   <span className="text-slate-600 dark:text-slate-400">
-                    pshubomi@gmail.com
+                    {profile.email}
                   </span>
                 </Link>
                 <Link
-                  href="tel:+2349161965510"
+                  href={`tel:${profile.phone.replace(/\s/g, "")}`}
                   className="inline-flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                 >
                   <span>Phone</span>
                   <span className="text-slate-600 dark:text-slate-400">
-                    +234 916 196 5510
+                    {profile.phone}
                   </span>
                 </Link>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="https://www.linkedin.com/in/derricktechtron-73717b23a"
+                  href={profile.links.linkedin}
                   target="_blank"
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                 >
                   LinkedIn
                 </Link>
                 <Link
-                  href="https://x.com/Derrick9923"
+                  href={profile.links.x}
                   target="_blank"
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                 >
                   X
                 </Link>
                 <Link
-                  href="https://github.com/Derrick99234"
+                  href={profile.links.github}
                   target="_blank"
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                 >
@@ -689,7 +643,7 @@ export default function Home() {
                     value: "Software Engineer",
                   },
                   { label: "Primary Strength", value: "Full-Stack (Backend-leaning)" },
-                  { label: "Location", value: "Lagos, Nigeria" },
+                  { label: "Location", value: profile.location },
                   { label: "Availability", value: "Contract • Remote" },
                 ].map((item) => (
                   <div
@@ -707,7 +661,7 @@ export default function Home() {
               </div>
               <div className="mt-8">
                 <Link
-                  href="mailto:pshubomi@gmail.com?subject=Work%20Opportunity"
+                  href={`mailto:${profile.email}?subject=Work%20Opportunity`}
                   className="inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-6 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
                 >
                   Send an email
@@ -721,8 +675,7 @@ export default function Home() {
       <footer className="border-t border-slate-200 py-10 dark:border-slate-800">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 sm:flex-row sm:items-center">
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            © {new Date().getFullYear()} Olatunbosun Olashubomi. All rights
-            reserved.
+            © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
             <Link href="#top" className="hover:text-slate-900 dark:hover:text-white">

@@ -26,6 +26,11 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'images.pexels.com',
                 pathname: '/photos/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'www.google.com',
+                pathname: '/s2/favicons**'
             }
         ],
     },

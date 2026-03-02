@@ -17,19 +17,100 @@
   ],
   "projects": [
     {
-      "title": "API Platform",
-      "description": "A modular REST API with clean architecture, robust error handling, and authentication-ready patterns.",
-      "tags": ["Node.js", "TypeScript", "MongoDB", "JWT"]
+      "title": "Ajani Smart Guide",
+      "description": "An AI-powered local guide for Oyo State (Ibadan) covering hotels, food, events, services, and market prices.",
+      "href": "https://ajani.ai",
+      "contribution": "Backend",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://ajani.ai",
+      "tags": ["Backend", "APIs", "Integrations"]
     },
     {
-      "title": "Admin Dashboard",
-      "description": "A fast, responsive dashboard with clean UI, reliable API integration, and performance-focused components.",
-      "tags": ["Next.js", "React", "Tailwind"]
+      "title": "OneFarm-Tech",
+      "description": "Farm-to-buyer marketplace connecting farmers directly with buyers for fair pricing, transparency, and sustainable supply chains.",
+      "href": "https://www.onefarmtech.com",
+      "contribution": "Backend",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.onefarmtech.com",
+      "tags": ["Backend", "REST APIs", "Payments"]
     },
     {
-      "title": "Workflow Automation",
-      "description": "Automation-first tooling and integrations that reduce manual work, with pragmatic AI-assisted features.",
-      "tags": ["Automation", "Integrations", "AI"]
+      "title": "YouTube Fetcher",
+      "description": "Fetches all videos from a YouTube channel and lets you filter by year, search, and track watched videos without endless scrolling.",
+      "href": "https://you-tube-fetcher.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://you-tube-fetcher.vercel.app",
+      "tags": ["Next.js", "UX", "Productivity"]
+    },
+    {
+      "title": "MERN Note App",
+      "description": "A full-stack note-taking app for creating, editing, and organizing notes with a clean, user-friendly interface.",
+      "href": "https://mern-note-app-theta.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://mern-note-app-theta.vercel.app",
+      "tags": ["MERN", "Auth", "CRUD"]
+    },
+    {
+      "title": "Praise Priestess",
+      "description": "Artist portfolio for PraisePriestess featuring singles catalog, discography timeline, gallery, and listening links.",
+      "href": "https://praise-priestess.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://praise-priestess.vercel.app",
+      "tags": ["Portfolio", "Media", "Responsive UI"]
+    },
+    {
+      "title": "Intertex",
+      "description": "Brand website for Intertex showcasing garments inspired by Turkish production techniques and Nigerian fashion aesthetics.",
+      "href": "https://www.intertexng.com",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.intertexng.com",
+      "tags": ["Brand Site", "UI", "Content"]
+    },
+    {
+      "title": "Hay Property",
+      "description": "Real estate website for showcasing listings and helping clients discover properties that match their budget and goals.",
+      "href": "https://hay-property.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://hay-property.vercel.app",
+      "tags": ["Real Estate", "Listings", "Responsive UI"]
+    },
+    {
+      "title": "Talk2Nebiah",
+      "description": "A modern web experience for engaging content and interactions—built with a clean UI and streamlined navigation.",
+      "href": "https://talk2nebiah.com",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://talk2nebiah.com",
+      "tags": ["Web App", "UI", "Deployment"]
+    },
+    {
+      "title": "Whatechnology",
+      "description": "Company site for modern digital solutions: software engineering, DevOps/security, cloud services, IT consulting, and recruiting.",
+      "href": "https://whatechnology.com",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://whatechnology.com",
+      "tags": ["Corporate", "Services", "SEO"]
+    },
+    {
+      "title": "Gospel Pillars",
+      "description": "Ministry website with church information, giving, and online forms for missions and community engagement.",
+      "href": "https://gospelpillars.org",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://gospelpillars.org",
+      "tags": ["Ministry", "Forms", "Content"]
+    },
+    {
+      "title": "Dralux",
+      "description": "High-converting landing page for a creator bundle: Premiere Pro templates, transitions, titles, SFX, and LUTs.",
+      "href": "https://dralux-temp.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://dralux-temp.vercel.app",
+      "tags": ["Landing Page", "Conversion", "UI"]
+    },
+    {
+      "title": "Celebration Village",
+      "description": "A modern marketing website built to showcase an event/brand experience with a clean layout and strong visuals.",
+      "href": "http://celebration-village.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=http://celebration-village.vercel.app",
+      "tags": ["Marketing", "UI", "Responsive"]
     }
   ],
   "skills": {
