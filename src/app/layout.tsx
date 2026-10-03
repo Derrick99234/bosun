@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -66,6 +67,7 @@ export default function RootLayout({
           {themeInitScript}
         </Script>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
