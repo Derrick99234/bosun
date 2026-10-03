@@ -31,11 +31,24 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'www.google.com',
                 pathname: '/s2/favicons**'
+            },
+            {
+                protocol: 'https',
+                hostname: 's0.wp.com',
+                pathname: '/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'image.thum.io',
+                pathname: '/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'api.microlink.io',
+                pathname: '/**'
             }
         ],
     },
 };
 
-
 export default nextConfig;
-

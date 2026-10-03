@@ -12,81 +12,272 @@
     }
   },
   "resumeSummary": [
-    "Software Engineer with strong full-stack delivery across web and mobile applications. I build scalable, maintainable products with clean APIs, authentication flows, and reliable database integration.",
+    "Full-Stack Software Engineer specializing in building performant web & mobile applications, scalable backend APIs, and real-time voice & AI automation systems. Focused on clean architecture, seamless UX, and high-impact delivery.",
     "I collaborate effectively with cross-functional teams, participate in Agile ceremonies, and create clear technical documentation to support onboarding and long-term product sustainability."
   ],
   "projects": [
     {
+      "title": "OneRepAI",
+      "description": "24/7 AI digital team member & omnichannel inbox automating customer support, lead qualification, and appointment booking across WhatsApp, Instagram, and web chat.",
+      "href": "https://onerepai.com",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://onerepai.com",
+      "tags": [
+        "Next.js",
+        "AI / LLM APIs",
+        "Omnichannel Inbox",
+        "Google Calendar API",
+        "Node.js",
+        "MongoDB"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Urban Grill Lounge",
+      "description": "Modern restaurant & cocktail lounge web experience with digital menu, VIP table reservation system, and event booking workflows.",
+      "href": "https://urban-grill-lounge.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://urban-grill-lounge.vercel.app/",
+      "tags": [
+        "Next.js",
+        "Tailwind CSS",
+        "Reservations",
+        "UI/UX"
+      ],
+      "featured": true
+    },
+    {
       "title": "Ajani Smart Guide",
-      "description": "An AI-powered local guide for Oyo State (Ibadan) covering hotels, food, events, services, and market prices.",
+      "description": "An AI-powered local guide for Oyo State (Ibadan) covering hotels, food, events, services, and real-time market prices.",
       "href": "https://ajani.ai",
       "contribution": "Backend",
       "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://ajani.ai",
-      "tags": ["Backend", "APIs", "Integrations"]
-    },
-    {
-      "title": "OneFarm-Tech",
-      "description": "Farm-to-buyer marketplace connecting farmers directly with buyers for fair pricing, transparency, and sustainable supply chains.",
-      "href": "https://www.onefarmtech.com",
-      "contribution": "Backend",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.onefarmtech.com",
-      "tags": ["Backend", "REST APIs", "Payments"]
-    },
-    {
-      "title": "YouTube Fetcher",
-      "description": "Fetches all videos from a YouTube channel and lets you filter by year, search, and track watched videos without endless scrolling.",
-      "href": "https://you-tube-fetcher.vercel.app",
-      "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://you-tube-fetcher.vercel.app",
-      "tags": ["Next.js", "UX", "Productivity"]
-    },
-    {
-      "title": "MERN Note App",
-      "description": "A full-stack note-taking app for creating, editing, and organizing notes with a clean, user-friendly interface.",
-      "href": "https://mern-note-app-theta.vercel.app",
-      "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://mern-note-app-theta.vercel.app",
-      "tags": ["MERN", "Auth", "CRUD"]
-    },
-    {
-      "title": "Praise Priestess",
-      "description": "Artist portfolio for PraisePriestess featuring singles catalog, discography timeline, gallery, and listening links.",
-      "href": "https://praise-priestess.vercel.app",
-      "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://praise-priestess.vercel.app",
-      "tags": ["Portfolio", "Media", "Responsive UI"]
-    },
-    {
-      "title": "Intertex",
-      "description": "Brand website for Intertex showcasing garments inspired by Turkish production techniques and Nigerian fashion aesthetics.",
-      "href": "https://www.intertexng.com",
-      "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.intertexng.com",
-      "tags": ["Brand Site", "UI", "Content"]
-    },
-    {
-      "title": "Hay Property",
-      "description": "Real estate website for showcasing listings and helping clients discover properties that match their budget and goals.",
-      "href": "https://hay-property.vercel.app",
-      "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://hay-property.vercel.app",
-      "tags": ["Real Estate", "Listings", "Responsive UI"]
-    },
-    {
-      "title": "Talk2Nebiah",
-      "description": "A modern web experience for engaging content and interactions—built with a clean UI and streamlined navigation.",
-      "href": "https://talk2nebiah.com",
-      "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://talk2nebiah.com",
-      "tags": ["Web App", "UI", "Deployment"]
+      "tags": [
+        "Backend",
+        "AI APIs",
+        "Integrations",
+        "Node.js"
+      ],
+      "featured": true
     },
     {
       "title": "Whatechnology",
-      "description": "Company site for modern digital solutions: software engineering, DevOps/security, cloud services, IT consulting, and recruiting.",
-      "href": "https://whatechnology.com",
+      "description": "Corporate digital consultancy site showcasing cloud architecture, software engineering, DevOps security, IT recruiting, and enterprise solutions.",
+      "href": "https://www.whatechnology.com/",
       "contribution": "Full-stack",
-      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://whatechnology.com",
-      "tags": ["Corporate", "Services", "SEO"]
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.whatechnology.com/",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Corporate",
+        "SEO"
+      ],
+      "featured": true
+    },
+    {
+      "title": "YouTube Fetcher",
+      "description": "Fetches and organizes all videos from YouTube channels with instant search, year filtering, and watch progress tracking without infinite scroll lag.",
+      "href": "https://you-tube-fetcher.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://you-tube-fetcher.vercel.app",
+      "tags": [
+        "Next.js",
+        "YouTube API",
+        "Tailwind CSS",
+        "UX"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Intertex NG Shop",
+      "description": "Modern fashion & apparel e-commerce store showcasing Turkish and Nigerian fusion clothing with cart and secure checkout.",
+      "href": "https://intertexng.shop/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://intertexng.shop/",
+      "tags": [
+        "E-Commerce",
+        "Fashion",
+        "Payments",
+        "Storefront"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Talk2Nebiah",
+      "description": "A modern, responsive interactive web platform delivering smooth client interactions, media streams, and streamlined navigation.",
+      "href": "https://talk2nebiah.com",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://talk2nebiah.com",
+      "tags": [
+        "Web App",
+        "Next.js",
+        "UI/UX",
+        "Vercel"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Aura Luxe MedSpa",
+      "description": "Luxury medical spa & wellness clinic website with service catalogs, treatment details, aesthetic pricing, and consultation booking.",
+      "href": "https://aura-luxe-medspa.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://aura-luxe-medspa.vercel.app/",
+      "tags": [
+        "Next.js",
+        "Healthcare",
+        "Bookings",
+        "Luxury UI"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Pearl Dental Clinic",
+      "description": "Comprehensive dental healthcare website featuring treatment packages, dentist profiles, patient reviews, and online appointment scheduling.",
+      "href": "https://pearl-dental-clinic-gilt.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://pearl-dental-clinic-gilt.vercel.app/",
+      "tags": [
+        "Next.js",
+        "Medical",
+        "Appointments",
+        "Responsive"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Havencrest Realty",
+      "description": "Premier real estate discovery portal featuring curated luxury property listings, neighborhood insights, and direct realtor contact forms.",
+      "href": "https://havencrest-realty-virid.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://havencrest-realty-virid.vercel.app/",
+      "tags": [
+        "Next.js",
+        "Real Estate",
+        "Listings",
+        "Filters"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Kairos Bookshop",
+      "description": "E-commerce bookstore platform with category filtering, book search, author spotlights, customer reviews, and cart checkout.",
+      "href": "https://kairos-bookshop.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://kairos-bookshop.vercel.app/",
+      "tags": [
+        "E-Commerce",
+        "Next.js",
+        "Books",
+        "Cart"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Cremier de la",
+      "description": "Artisanal dessert & gelato bar website showcasing flavor collections, custom party orders, catering services, and outlet locations.",
+      "href": "https://cremierdela.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://cremierdela.vercel.app/",
+      "tags": [
+        "Brand Site",
+        "Food & Beverage",
+        "UI Design"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Royalty Academy",
+      "description": "Educational institution portal featuring academic curriculum, student admissions, school calendar, and virtual campus tours.",
+      "href": "https://www.royaltyacademy.org/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.royaltyacademy.org/",
+      "tags": [
+        "Education",
+        "Admissions",
+        "Portal",
+        "SEO"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Macwealth Freestore & Blog",
+      "description": "Digital hub combining a curated digital product store with a financial intelligence and lifestyle resource blog.",
+      "href": "https://macwealth-freestore-blog.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://macwealth-freestore-blog.vercel.app/",
+      "tags": [
+        "Blog",
+        "Digital Store",
+        "Content",
+        "Next.js"
+      ],
+      "featured": false
+    },
+    {
+      "title": "GPC Ikeja",
+      "description": "Community church organization platform featuring sermon archives, live streams, donation gateways, and ministry event calendar.",
+      "href": "https://gpc-ikeja.vercel.app/",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://gpc-ikeja.vercel.app/",
+      "tags": [
+        "Church",
+        "Media",
+        "Donations",
+        "Events"
+      ],
+      "featured": false
+    },
+    {
+      "title": "OneFarm-Tech",
+      "description": "Farm-to-buyer marketplace connecting agricultural producers directly with buyers for fair pricing and transparent supply chains.",
+      "href": "https://www.onefarmtech.com",
+      "contribution": "Backend",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://www.onefarmtech.com",
+      "tags": [
+        "Backend",
+        "REST APIs",
+        "Payments"
+      ],
+      "featured": false
+    },
+    {
+      "title": "MERN Note App",
+      "description": "A full-stack note-taking platform for creating, organizing, and managing secure notes with rich markdown support and JWT auth.",
+      "href": "https://mern-note-app-theta.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://mern-note-app-theta.vercel.app",
+      "tags": [
+        "MERN",
+        "Auth",
+        "CRUD"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Praise Priestess",
+      "description": "Artist portfolio for PraisePriestess featuring singles catalog, discography timeline, media gallery, and listening links.",
+      "href": "https://praise-priestess.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://praise-priestess.vercel.app",
+      "tags": [
+        "Portfolio",
+        "Media",
+        "Responsive UI"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Hay Property",
+      "description": "Real estate website showcasing listings and helping clients discover properties that match their budget and location goals.",
+      "href": "https://hay-property.vercel.app",
+      "contribution": "Full-stack",
+      "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://hay-property.vercel.app",
+      "tags": [
+        "Real Estate",
+        "Listings",
+        "Responsive UI"
+      ],
+      "featured": false
     },
     {
       "title": "Gospel Pillars",
@@ -94,7 +285,12 @@
       "href": "https://gospelpillars.org",
       "contribution": "Full-stack",
       "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://gospelpillars.org",
-      "tags": ["Ministry", "Forms", "Content"]
+      "tags": [
+        "Ministry",
+        "Forms",
+        "Content"
+      ],
+      "featured": false
     },
     {
       "title": "Dralux",
@@ -102,7 +298,12 @@
       "href": "https://dralux-temp.vercel.app",
       "contribution": "Full-stack",
       "image": "https://www.google.com/s2/favicons?sz=256&domain_url=https://dralux-temp.vercel.app",
-      "tags": ["Landing Page", "Conversion", "UI"]
+      "tags": [
+        "Landing Page",
+        "Conversion",
+        "UI"
+      ],
+      "featured": false
     },
     {
       "title": "Celebration Village",
@@ -110,35 +311,85 @@
       "href": "http://celebration-village.vercel.app",
       "contribution": "Full-stack",
       "image": "https://www.google.com/s2/favicons?sz=256&domain_url=http://celebration-village.vercel.app",
-      "tags": ["Marketing", "UI", "Responsive"]
+      "tags": [
+        "Marketing",
+        "UI",
+        "Responsive"
+      ],
+      "featured": false
     }
   ],
   "skills": {
     "frontend": [
       "React.js",
       "Next.js",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
       "TypeScript",
-      "JavaScript"
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3"
     ],
     "backend": [
       "Node.js",
       "Express.js",
       "Nest.js",
+      "REST APIs",
+      "WebSockets",
       "MongoDB",
-      "Postman",
-      "AWS",
+      "PostgreSQL",
       "Python",
-      "Firebase",
       "Django",
+      "Firebase",
+      "AWS",
       "JWT / RBAC"
     ],
-    "mobile": ["React Native", "NativeWind", "Expo", "TypeScript"],
-    "tools": ["Jira", "Trello", "Figma", "VS Code", "Git", "GitHub"]
+    "mobile": [
+      "React Native",
+      "NativeWind",
+      "Expo",
+      "TypeScript"
+    ],
+    "tools": [
+      "AI / LLM APIs",
+      "Twilio Voice",
+      "Paystack",
+      "Stripe",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Figma",
+      "Jira",
+      "Trello",
+      "VS Code"
+    ]
   },
   "experience": [
+    {
+      "company": "OneRepAI",
+      "location": "Remote",
+      "role": "Founder & Lead Full-Stack Engineer",
+      "dates": "Jan 2025 - Present",
+      "highlights": [
+        "Architected and launched a 24/7 AI digital team member platform automating customer conversations, order intake, and appointment booking across WhatsApp, Instagram, and live web chat.",
+        "Engineered a knowledge-grounding ingestion engine (PDFs, docs, website URLs) with behavior guardrails to deliver accurate, brand-aligned responses without hallucinations.",
+        "Built a unified multi-channel shared inbox and automated Google Calendar scheduling integration using Next.js, TypeScript, Node.js, and MongoDB."
+      ]
+    },
+    {
+      "company": "Sleeky Programmers Limited",
+      "location": "Remote",
+      "role": "Software Engineer",
+      "dates": "Aug 2024 - Apr 2025",
+      "highlights": [
+        "Participated in code reviews to maintain high-quality standards and best practices.",
+        "Worked in Agile ceremonies (sprint planning, stand-ups, retrospectives).",
+        "Built RESTful APIs and integrated third-party services to streamline application processes.",
+        "Contributed to scalable web applications using Next.js, Nest.js, Express.js, React, MongoDB, Node.js, and TypeScript.",
+        "Used Git workflows to collaborate, resolve conflicts, and keep a clean development pipeline.",
+        "Wrote technical documentation for project workflows and APIs to support onboarding and knowledge transfer."
+      ]
+    },
     {
       "company": "iDeyFind",
       "location": "Remote",
@@ -150,20 +401,6 @@
         "Created and maintained technical documentation to support knowledge sharing, onboarding, and long-term product sustainability.",
         "Used Git-based workflows to collaborate efficiently, manage feature branches, and maintain a stable development pipeline.",
         "Developed and maintained RESTful APIs and core application features tailored to internal business needs."
-      ]
-    },
-    {
-      "company": "Sleeky Programmers Limited",
-      "location": "Remote",
-      "role": "Intern Software Engineer",
-      "dates": "Aug 2024 - Apr 2025",
-      "highlights": [
-        "Participated in code reviews to maintain high-quality standards and best practices.",
-        "Worked in Agile ceremonies (sprint planning, stand-ups, retrospectives).",
-        "Built RESTful APIs and integrated third-party services to streamline application processes.",
-        "Contributed to scalable web applications using Next.js, Nest.js, Express.js, React, MongoDB, Node.js, and TypeScript.",
-        "Used Git workflows to collaborate, resolve conflicts, and keep a clean development pipeline.",
-        "Wrote technical documentation for project workflows and APIs to support onboarding and knowledge transfer."
       ]
     },
     {

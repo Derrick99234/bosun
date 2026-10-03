@@ -60,6 +60,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <Script id="theme-init" strategy="beforeInteractive">
           {themeInitScript}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ProjectSlider } from "@/components/ProjectSlider";
 import portfolioData from "@/data/portfolio.json";
 
 import { CiMail } from "react-icons/ci";
@@ -101,62 +102,6 @@ function Section({
   );
 }
 
-function ProjectCard({ project }: { project: Project }) {
-  return (
-    <div className="rounded-2xl border border-slate-200 bg-white/70 p-7 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-950/40 dark:shadow-none">
-      <div className="-mt-1 mb-5 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <Image
-            src={project.image}
-            alt={`${project.title} icon`}
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-xl border border-slate-200 bg-white object-contain p-2 dark:border-slate-800 dark:bg-slate-950"
-          />
-          <div className="min-w-0">
-            <h3 className="truncate text-lg font-semibold text-slate-900 dark:text-slate-100">
-              {project.title}
-            </h3>
-            <p className="mt-1 text-xs font-semibold text-slate-500 dark:text-slate-400">
-              {project.contribution === "Backend" ? "Backend-only" : "Full-stack"}
-            </p>
-          </div>
-        </div>
-        <Link
-          href={project.href}
-          target="_blank"
-          className="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
-        >
-          Visit
-        </Link>
-      </div>
-      <div className="flex items-start justify-between gap-6">
-        <div>
-          <p className="text-sm leading-7 text-slate-600 dark:text-slate-400">
-            {project.description}
-          </p>
-        </div>
-      </div>
-      <div className="mt-5 flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <Badge key={tag}>{tag}</Badge>
-        ))}
-      </div>
-      {project.repo && (
-        <div className="mt-5">
-          <Link
-            href={project.repo}
-            target="_blank"
-            className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
-          >
-            Repo
-          </Link>
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -234,23 +179,16 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
-                <div className="flex flex-wrap gap-2">
-                  <Badge>Software Engineer</Badge>
-                  <Badge>Web & Mobile</Badge>
-                  <Badge>APIs • Auth • Databases</Badge>
-                  <Badge>Automation • AI</Badge>
-                </div>
-                <h1 className="mt-8 text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:text-6xl">
+                <h1 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:text-6xl">
                   {profile.name}
                 </h1>
                 <p className="mt-4 max-w-2xl text-base font-semibold tracking-tight text-slate-700 dark:text-slate-300">
                   {profile.title}
                 </p>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-                  Highly skilled software engineer with a strong foundation in
-                  designing, developing, and deploying scalable software solutions. I
-                  collaborate across teams to deliver innovative products and optimize
-                  system performance—focused on impact, clarity, and maintainability.
+                  Full-Stack Software Engineer specializing in building performant web & mobile
+                  applications, scalable backend APIs, and real-time voice & AI automation systems.
+                  Focused on clean architecture, seamless UX, and high-impact delivery.
                 </p>
                 <p className="mt-4 text-sm font-semibold text-slate-600 dark:text-slate-400">
                   {profile.location}
@@ -553,28 +491,13 @@ export default function Home() {
           </div>
         </Section>
 
+        {/* Selected Projects with Slider */}
         <Section
           id="projects"
           eyebrow="Projects"
           title={`Selected projects (${projects.length})`}
         >
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Want to see more? I keep shipping and iterating on GitHub.
-            </p>
-            <Link
-              href={profile.links.github}
-              target="_blank"
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
-            >
-              View GitHub
-            </Link>
-          </div>
+          <ProjectSlider projects={projects} />
         </Section>
 
         <Section id="contact" eyebrow="Contact" title="Let’s work together">
@@ -620,6 +543,7 @@ export default function Home() {
                   target="_blank"
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                 >
+                  <FaXTwitter className="mr-2 h-4 w-4" />
                   X
                 </Link>
                 <Link
