@@ -16,9 +16,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ola | Full-Stack Software Engineer",
+  title: "Ola | Full-Stack & AI Systems Engineer • Startup Founder",
   description:
-    "Full-stack software engineer with strong backend foundations, building secure APIs, scalable web apps, automation, and AI-assisted features.",
+    "Full-Stack & AI Systems Engineer and Startup Founder building high-performance web & mobile applications, autonomous AI agents, and resilient backend architectures.",
 };
 
 const themeInitScript = `

@@ -186,9 +186,10 @@ export default function Home() {
                   {profile.title}
                 </p>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-                  Full-Stack Software Engineer specializing in building performant web & mobile
-                  applications, scalable backend APIs, and real-time voice & AI automation systems.
-                  Focused on clean architecture, seamless UX, and high-impact delivery.
+                  Full-Stack &amp; AI Systems Engineer with founder-grade execution. I architect
+                  high-performance web &amp; mobile applications, resilient backend microservices,
+                  and autonomous AI agents that solve complex business challenges and drive
+                  real commercial impact.
                 </p>
                 <p className="mt-4 text-sm font-semibold text-slate-600 dark:text-slate-400">
                   {profile.location}
@@ -230,8 +231,7 @@ export default function Home() {
                       Contract • Remote
                     </p>
                     <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                      Full-stack delivery with strong backend foundations across web
-                      and mobile development.
+                      Available for remote contracts, core engineering roles, and technical advisory.
                     </p>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ export default function Home() {
                       Focus
                     </p>
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                      Full-stack apps, scalable APIs, auth flows, and workflow automation.
+                      Production AI agents, high-throughput APIs, real-time voice pipelines, and 0→1 product builds.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 dark:border-slate-800 dark:bg-slate-950">
@@ -250,7 +250,7 @@ export default function Home() {
                       Strengths
                     </p>
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                      Problem-solving, performance optimization, and maintainable systems.
+                      Founder-level execution, systems architecture, rapid prototyping, and end-to-end delivery.
                     </p>
                   </div>
                 </div>
@@ -306,28 +306,22 @@ export default function Home() {
                     About me
                   </h3>
                   <p className="mt-4 leading-8 text-slate-600 dark:text-slate-400">
-                    I&apos;m {profile.name}, a software engineer based in{" "}
-                    {profile.location}. I build scalable web and mobile applications
-                    with a strong backend foundation—clean APIs, authentication flows,
-                    and reliable database integration—while also delivering modern UIs
-                    in React/Next.js and React Native.
+                    I&apos;m a builder by nature. I engineer scalable web and mobile applications
+                    with deep backend rigor—building clean APIs, robust authentication, and high-performance
+                    databases, while delivering sleek, responsive interfaces in React/Next.js and React Native.
                   </p>
                   <p className="mt-4 leading-8 text-slate-600 dark:text-slate-400">
-                    I&apos;ve also worked as an instructor, training and mentoring
-                    students across frontend and backend technologies, and I bring
-                    that clarity into how I communicate, document, and ship work on a
-                    team.
+                    What sets me apart is that I think beyond just lines of code—I build with a product-first,
+                    problem-solving mindset. A clear example of this is <strong className="font-semibold text-slate-900 dark:text-slate-100">OneRepAI</strong>,
+                    which started as an AI project in my portfolio and evolved into a production platform after
+                    conversations with businesses revealed their daily struggle with 24/7 lead capture and customer support.
                   </p>
-                  {/* <div className="mt-6 flex flex-wrap gap-2">
-                    <Badge>JavaScript</Badge>
-                    <Badge>TypeScript</Badge>
-                    <Badge>React</Badge>
-                    <Badge>Next.js</Badge>
-                    <Badge>Node.js</Badge>
-                    <Badge>Nest.js</Badge>
-                    <Badge>MongoDB</Badge>
-                    <Badge>React Native</Badge>
-                  </div> */}
+                  <p className="mt-4 leading-8 text-slate-600 dark:text-slate-400">
+                    Over the past 3+ years, I&apos;ve combined that builder drive with hands-on technical execution across
+                    20+ shipped applications: architecting microservices, sub-second Twilio voice automation, real-time
+                    WebSockets, and secure payment workflows. I&apos;ve also mentored 50+ developers, instilling the same
+                    engineering clarity, clean documentation, and high standards that I bring to every team and project I take on.
+                  </p>
                 </div>
               </div>
             </div>
@@ -335,22 +329,22 @@ export default function Home() {
             <div className="grid gap-4">
               {[
                 {
-                  title: "Backend Engineering",
-                  text: "Secure APIs, authentication, database design, logging, and debugging with scalable structure.",
+                  title: "Autonomous AI & Real-Time Systems",
+                  text: "Engineering intelligent conversational systems and automated workflows.",
                   detail:
-                    "I build RESTful APIs, implement JWT/RBAC, integrate MongoDB, and connect third-party services with reliable error handling.",
+                    "I build low-latency voice agents with Twilio, dynamic knowledge ingestion (PDFs/URLs), WebSocket streaming, and automated calendar integrations.",
                 },
                 {
-                  title: "Frontend Delivery",
-                  text: "Responsive interfaces in React/Next.js with clean integration and performance focus.",
+                  title: "Resilient Full-Stack Architecture",
+                  text: "High-throughput backend engines powering modern web & mobile experiences.",
                   detail:
-                    "I ship accessible UI, reusable components, and API-driven screens that stay fast on mobile and desktop.",
+                    "I design robust REST & WebSocket APIs, secure RBAC/JWT authentication, database schemas (PostgreSQL/MongoDB), and scalable Next.js & React Native applications.",
                 },
                 {
-                  title: "Automation & AI",
-                  text: "Automate manual workflows and integrate AI features pragmatically for real business value.",
+                  title: "0 → 1 Product & Systems Execution",
+                  text: "Translating complex business requirements into production-ready software.",
                   detail:
-                    "I automate repetitive processes, build integrations, and add AI-assisted features where they improve real outcomes.",
+                    "From rapid prototyping and MVPs to production scaling, I build software that solves real user pain points with maintainable architecture and high reliability.",
                 },
               ].map((item) => (
                 <div
@@ -407,28 +401,28 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "API Design & Development",
-                text: "REST APIs with consistent patterns, validation, error handling, and maintainable code structure.",
+                title: "Autonomous AI Agents & Workflows",
+                text: "Custom 24/7 AI teammates that ingest your internal knowledge base, qualify leads, automate customer support, and trigger external APIs without human bottlenecks.",
               },
               {
-                title: "Auth & Permissions",
-                text: "JWT authentication, RBAC, and secure authorization boundaries with predictable access control.",
+                title: "Real-Time Voice & Chat Infrastructure",
+                text: "Sub-second voice agents powered by Twilio Voice, WebSockets, and audio streaming, enabling natural telephone conversations with AI.",
               },
               {
-                title: "Database & Performance",
-                text: "Schema modeling, query optimization, indexes, and performance-focused data access design.",
+                title: "0 → 1 Web & Mobile Applications",
+                text: "End-to-end product development using Next.js, React, and React Native—delivering fast load times, sleek interfaces, and conversion-optimized UX.",
               },
               {
-                title: "Frontend Integration",
-                text: "Modern UI with Next.js + React, clean API consumption, and accessible component patterns.",
+                title: "Scalable APIs & Microservices",
+                text: "Modular backend services built with Node.js, NestJS, and Express, designed for high concurrent throughput, clean documentation, and seamless third-party consumption.",
               },
               {
-                title: "Third-Party Integrations",
-                text: "Payments, messaging, storage, and external APIs integrated safely with robust failure handling.",
+                title: "Fintech & Payment Gateway Systems",
+                text: "Secure, webhook-verified monetization pipelines integrating Paystack, Stripe, automated subscription billing, and order management flows.",
               },
               {
-                title: "Automation & AI Features",
-                text: "Workflow automation and AI helpers that improve productivity without adding long-term complexity.",
+                title: "Database Optimization & Security",
+                text: "High-reliability data modeling in PostgreSQL, MongoDB, and Redis with strict RBAC access control, indexed queries, and automated backups.",
               },
             ].map((item) => (
               <div
@@ -507,8 +501,9 @@ export default function Home() {
                 Get in touch
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                If you need a backend-leaning full-stack engineer to build APIs, ship
-                features end-to-end, or automate workflows, I&apos;m open to opportunities.
+                Whether you need an engineer to architect a new product from the ground up,
+                scale existing platforms, or integrate autonomous AI and resilient APIs into your stack,
+                let&apos;s build something impactful together.
               </p>
               <div className="mt-8 flex flex-col gap-3">
                 <Link
@@ -564,9 +559,9 @@ export default function Home() {
                 {[
                   {
                     label: "Role",
-                    value: "Software Engineer",
+                    value: "Full-Stack & AI Systems Engineer",
                   },
-                  { label: "Primary Strength", value: "Full-Stack (Backend-leaning)" },
+                  { label: "Primary Strength", value: "0→1 Systems & Product Engineering" },
                   { label: "Location", value: profile.location },
                   { label: "Availability", value: "Contract • Remote" },
                 ].map((item) => (
@@ -588,7 +583,7 @@ export default function Home() {
                   href={`mailto:${profile.email}?subject=Work%20Opportunity`}
                   className="inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-6 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
                 >
-                  Send an email
+                  Start a Conversation
                 </Link>
               </div>
             </div>
