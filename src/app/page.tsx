@@ -157,7 +157,7 @@ export default function Home() {
                 Let&apos;s Talk
               </Link>
               <Link
-                href="/OLATUNBOSUN_RESUME.pdf"
+                href="/OLATUNBOSUN_RESUME_V2.pdf"
                 target="_blank"
                 className="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900 sm:inline-flex"
               >
@@ -204,7 +204,7 @@ export default function Home() {
                     Email Me
                   </Link>
                   <Link
-                    href="/OLATUNBOSUN_RESUME.pdf"
+                    href="/OLATUNBOSUN_RESUME_V2.pdf"
                     target="_blank"
                     className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:hover:bg-slate-900"
                   >
